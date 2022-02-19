@@ -28,8 +28,9 @@ func _physics_process(_delta):
 """
  
 
-func _on_Player_shooted_enemy(_damage: int):
-	class_data._take_damage(_damage)
+
+func _on_Player_shootedEnemy(damage) -> void:
+	class_data._take_damage(damage)
 
  
 func death():
@@ -38,3 +39,6 @@ func death():
 
 func set_player(p):
 	player = p
+
+
+

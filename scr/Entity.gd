@@ -6,5 +6,5 @@ export (int) var strenght = 10
 export (float) var speed = 500
 
 
-func _take_damage(damage : float = 10):
-	self.health -= damage
+func _take_damage(Damage : float = 10):
+	self.health -= Damage

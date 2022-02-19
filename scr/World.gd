@@ -1,12 +1,13 @@
 extends Node2D
 
-export var hit_effect: PackedScene
+export var hitEffect: PackedScene
 
-func generate_hit_effect(hit_position: Vector2)->void:
-	var temp = hit_effect.instance()
+
+func generateEffect(hitPosition: Vector2, effect:PackedScene)->void:
+	var temp = effect.instance()
 	add_child(temp)
-	temp.position = hit_position
+	temp.position = hitPosition
 
 
-func _on_Player_fire_shot(hit_pos: Vector2) -> void:
-	generate_hit_effect(hit_pos)
+func _on_Player_fireShot(hitPos: Vector2) -> void:
+	generateEffect(hitPos, hitEffect)

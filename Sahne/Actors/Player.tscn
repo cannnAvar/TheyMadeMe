@@ -1,17 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Img/PlayerTopdown-Sheet.png" type="Texture" id=1]
 [ext_resource path="res://scr/Player.gd" type="Script" id=2]
+[ext_resource path="res://Sahne/Bullet.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 11.0
 
 [node name="Player" type="KinematicBody2D"]
+position = Vector2( 0, 1 )
 collision_mask = 6
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
+bulletScene = ExtResource( 3 )
 
 [node name="PlayerTopdown-Sheet" type="Sprite" parent="."]
 position = Vector2( 5, 0 )

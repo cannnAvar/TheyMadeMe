@@ -7,13 +7,13 @@
 
 [node name="World" type="Node2D"]
 script = ExtResource( 2 )
-hit_effect = ExtResource( 3 )
+hitEffect = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 125, 110 )
+position = Vector2( 382, 189 )
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( 207, 80 )
 
-[connection signal="fire_shot" from="Player" to="." method="_on_Player_fire_shot"]
-[connection signal="shooted_enemy" from="Player" to="Enemy" method="_on_Player_shooted_enemy"]
+[connection signal="fireShot" from="Player" to="." method="_on_Player_fireShot"]
+[connection signal="shootedEnemy" from="Player" to="Enemy" method="_on_Player_shootedEnemy"]
