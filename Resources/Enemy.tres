@@ -6,4 +6,4 @@
 script = ExtResource( 1 )
 health = 100
 strenght = 10
-Speed = 500.0
+speed = 2000.0

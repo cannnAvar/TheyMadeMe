@@ -10,6 +10,9 @@ var velocity = Vector2()
 
 func _ready() -> void:
 	class_data = load("res://Resources/Player.tres")
+	yield(get_tree(), "idle_frame")
+	get_tree().call_group("They", "set_player", self)
+	add_to_group("Player")
 
 func get_input():
 	velocity = Vector2()
@@ -35,7 +38,7 @@ func _process(_delta: float) -> void:
 		death()
 
 func _physics_process(delta: float) -> void:
-	velocity = velocity.normalized() * class_data.Speed  * delta
+	velocity = velocity.normalized() * class_data.speed * delta
 	velocity = move_and_slide(velocity)
 
 func death():
