@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sahne/Actors/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scr/World.gd" type="Script" id=2]
+[ext_resource path="res://Sahne/HitEfect.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sahne/Actors/Enemy.tscn" type="PackedScene" id=4]
+
+[node name="World" type="Node2D"]
+script = ExtResource( 2 )
+hit_effect = ExtResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 125, 110 )
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 207, 80 )
+
+[connection signal="fire_shot" from="Player" to="." method="_on_Player_fire_shot"]
+[connection signal="shooted_enemy" from="Player" to="Enemy" method="_on_Player_shooted_enemy"]

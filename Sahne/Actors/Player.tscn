@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Img/PlayerTopdown-Sheet.png" type="Texture" id=1]
+[ext_resource path="res://scr/Player.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 11.0
+
+[node name="Player" type="KinematicBody2D"]
+collision_mask = 6
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlayerTopdown-Sheet" type="Sprite" parent="."]
+position = Vector2( 5, 0 )
+rotation = 1.5708
+texture = ExtResource( 1 )
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 5, 10 )
+enabled = true
+cast_to = Vector2( 5000, 0 )
+collision_mask = 6
