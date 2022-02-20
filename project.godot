@@ -8,21 +8,24 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Resource",
-"class": "Entity",
-"language": "GDScript",
-"path": "res://scr/Entity.gd"
-} ]
-_global_script_class_icons={
-"Entity": ""
-}
-
 [application]
 
 config/name="Yeni proje"
 run/main_scene="res://Sahne/Levels/World.tscn"
 config/icon="res://Img/icon.png"
+
+[display]
+
+window/size/width=640
+window/size/height=360
+window/size/always_on_top=true
+window/size/test_width=1280
+window/size/test_height=720
+window/dpi/allow_hidpi=true
+window/per_pixel_transparency/allowed=true
+window/per_pixel_transparency/enabled=true
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
 
 [gdnative]
 
@@ -105,4 +108,9 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+2d/snapping/use_gpu_pixel_snap=true
 environment/default_environment="res://default_env.tres"
+
+[world]
+
+2d/cell_size=16
