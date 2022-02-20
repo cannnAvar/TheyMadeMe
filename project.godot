@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="Yeni proje"
+config/name="Look the stars"
 run/main_scene="res://Sahne/Levels/World.tscn"
 config/icon="res://Img/icon.png"
 
