@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="Look the stars"
+config/name="They Made ME"
 run/main_scene="res://Sahne/Levels/World.tscn"
 config/icon="res://Img/icon.png"
 
